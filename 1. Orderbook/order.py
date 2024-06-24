@@ -4,7 +4,7 @@ class Order:
         self.amount = amount
         self.price = price
         self.side = side  # True for buy, False for sell
-        self.timestamp = timestamp  # Timestamp for order creation
+        self.timestamp = timestamp  
 
     def __lt__(self, other):
         if self.price == other.price:

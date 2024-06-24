@@ -4,7 +4,6 @@ from storage import save_orderbook, load_orderbook
 import time
 
 def main():
-    # Load the order book from file
     orderbook = load_orderbook('orderbook.pkl')
     
     while True:
@@ -17,14 +16,13 @@ def main():
             continue
         try:
             user_id, amount, price, side = user_input.split()
-            timestamp = time.time()  # Generate a timestamp for the order
+            timestamp = time.time()  
             order = Order(int(user_id), int(amount), float(price), side.lower() == 'buy', timestamp)
             orderbook.add_order(order)
             orderbook.print_order_book()
         except ValueError:
             print("Invalid input. Please try again.")
     
-    # Save the order book to file
     save_orderbook(orderbook, 'orderbook.pkl')
 
 if __name__ == "__main__":

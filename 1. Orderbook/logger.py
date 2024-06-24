@@ -1,6 +1,5 @@
 import logging
 
-# Configure logging
 logging.basicConfig(filename='transactions.log', level=logging.INFO,
                     format='%(asctime)s - BUYER: %(buyer)d - SELLER: %(seller)d - AMOUNT: %(amount)d UAH @ %(price).2f USD')
 
