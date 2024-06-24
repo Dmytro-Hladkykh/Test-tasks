@@ -27,6 +27,25 @@ The maze generation utilizes a stack-based algorithm to create a random maze. Th
 3: Ending point (E)
 4: Path (◍)
 
+Step-by-step process of maze generation:
+
+1. Initialize the maze with all cells as walls (0).
+2. Choose random starting and ending points on the outer edges of the maze.
+3. Create a stack and push the starting point onto it.
+4. While the stack is not empty:
+   a. Pop a cell from the stack.
+   b. If the cell has not been visited:
+      - Mark it as visited.
+      - Mark it as part of the path (1).
+      - Get unvisited neighbors of the cell.
+      - Randomly shuffle the neighbors.
+      - For each neighbor:
+        * If it's the end point, push it onto the stack and break the loop.
+        * Otherwise, push it onto the stack.
+5. Mark the starting point as 'S' (2) and the ending point as 'E' (3).
+
+This algorithm ensures that there is always a path from the start to the end, and creates a maze with a single solution.
+
 ### Depth-First Search (DFS)
 
 The DFS algorithm is employed to find a path from the starting point to the ending point in the generated maze. The DFS explores possible paths, backtracking when necessary, until it successfully reaches the destination. The path is then displayed, and the maze with the path is printed.
