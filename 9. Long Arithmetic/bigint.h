@@ -469,4 +469,4 @@ std::istream& operator>>(std::istream& is, BigInt& bi) {
     return is;
 }
 
-#endif // BIGINT_H
+#endif 

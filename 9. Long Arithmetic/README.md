@@ -72,6 +72,7 @@ Ensure you have the following installed on your system:
      - **Operator `>`**: Implemented as `rhs < *this`.
      - **Operator `>=`**: Implemented as `!(rhs < *this)`.
      - **Operator `==`**: Compare signs and the `digits` vector for equality.
+     - **Where `rhs` - is a `right-hand side`, like a second `BigInt`.**
 
 **Arithmetic Operations**
 
